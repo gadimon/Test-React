@@ -29,7 +29,9 @@ const Turtles = () => {
     }, [])
 
     const AddToppings = (newTopping: PizzaToppings) => {
-        if(toppings.length >= 5)return
+        if(toppings.length >= 5 && toppings.map((topping) => (topping.name === topping.name)))
+            return alert("You can't Add mor then 5")
+
         setToppings([...toppings, newTopping])
     }
   return (
